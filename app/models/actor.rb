@@ -11,7 +11,6 @@ class Actor < ActiveRecord::Base
     roles = []
     self.characters.each do |character|
       roles << "#{character.name} - #{character.show.name}"
-      binding.pry
     end
   end
 
