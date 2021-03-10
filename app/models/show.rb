@@ -5,5 +5,12 @@ class Show < ActiveRecord::Base
 
   def actors_list
     binding.pry
+    actors = []
+
+    self.characters.each do |character|
+      actors << character.actor.full_name
+    end
+
+    actors
   end
 end
